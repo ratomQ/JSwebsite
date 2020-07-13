@@ -1,0 +1,330 @@
+html
+{
+    font-size: 15px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+body
+{
+    margin: 0;
+
+    font-size: 1rem;
+    line-height: 1.6;
+    background-color: #313030;
+
+    display: flex;
+    justify-content: center;
+}
+
+*,
+*:before,
+*:after
+{
+    box-sizing: border-box;
+}
+
+h1, h2, h3, h4, h5, h6
+{
+    margin: 0;
+}
+
+/* ============== First Page ============== */ 
+
+.content
+{
+    padding-top: 200px;
+
+    display: flex;
+
+    align-items: center;
+    flex-direction: column;
+}
+
+.content-title
+{
+    font-size: 40px;
+    font-family: cursive;
+    text-align: center;
+    letter-spacing: 10px;
+    color: rgb(214, 210, 210);
+}
+
+.content-btn
+{
+    background-color: #ed2553;
+    
+    border: none;
+    border-radius: 5px;
+    outline: none;
+
+    width: 200px;
+    height: 50px;
+
+    margin-top: 250px;
+    padding: 10px 0;
+
+    text-transform: uppercase;
+    font-size: 20px;
+    font-family: cursive;
+
+    transition: background .2s linear, box-shadow .2s linear;
+    cursor: pointer;
+}
+
+.content-btn:hover
+{
+    box-shadow: 0 2px 50px #ed2553;
+}
+
+.content-btn:active
+{
+    background-color: #6d1429;
+
+    box-shadow: 0 2px 50px #6d1429;
+}
+
+/* ===================================== */ 
+
+/* ============== Second Page ============== */ 
+
+.container
+{
+    padding-top: 50px;
+
+    max-width: 1200px;
+}
+
+.container-title
+{
+    padding-top: 25px;
+    
+    font-size: 40px;
+    font-family: cursive;
+    text-align: center;
+    letter-spacing: 10px;
+    color: #ed2553;
+
+    text-shadow: 0 5px 20px #ed2553;
+}
+
+.container-blocks
+{
+    margin-top: 75px;
+
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.block
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex-basis: 40%;
+    min-width: 400px;
+
+    border: 2px solid rgb(114, 114, 109);
+    border-radius: 10px;
+    box-shadow: 0 2px 50px #000;
+
+    margin-bottom: 75px;
+    padding: 20px;
+
+    background-color:rgb(83, 83, 83);
+    transition: box-shadow .2s linear;
+}
+
+.block:hover
+{
+    box-shadow: 0 2px 50px rgb(224, 236, 47);
+}
+
+.block-title
+{
+    text-align: center;
+    color: #fff;
+}
+
+.block-content
+{
+    color: #d9d9d9;
+    font-size: 18px;
+}
+
+.block-footer
+{
+    display: flex;
+    justify-content: space-around;
+}
+
+.block-btn1,
+.block-btn2
+{
+    font-family: 'Montserrat', sans-serif;
+    color: #fff;
+    font-size: 16px;
+    
+    border: none;
+    outline: none;
+    border-radius: 5px;
+
+    height: 3rem;
+
+    padding-top: 10px;
+    padding-bottom: 10px;
+
+    transition: background .2s linear, box-shadow .2s linear;
+    cursor: pointer;
+}
+
+.block-btn1
+{
+    background-color:#007bff;
+    flex-basis: 60%;
+}
+
+.block-btn1:hover
+{
+    background-color: #036ddf;
+}
+
+.block-btn1:active
+{
+    background-color: #004085;
+}
+
+.block-btn2
+{
+    background-color:#dc3545;
+    flex-basis: 30%;
+}
+
+.block-btn2:hover
+{
+    background-color: #c02f3e;
+}
+
+.block-btn2:active
+{
+    background-color: #8d242e;
+}
+
+/* ============== Modal Windows ============== */ 
+
+
+.modal-overlay
+{
+    position: fixed;
+    top:0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+
+    background-color: rgba(0, 0, 0, 0.5);
+
+    z-index: -1;
+    opacity: 0;
+}
+
+.modal-window
+{
+    width: 60%;
+    min-height: 200px;
+
+    margin: 90px auto 0;
+    padding: 64px 0;
+
+    position: relative;
+
+    background-color: #fff;
+
+    z-index: -1;
+    opacity: 0;
+}
+
+.modal.open .modal-overlay,
+.modal.open .modal-window
+{
+    z-index: 1000;
+    opacity: 1;
+}
+
+.modal-close 
+{
+    position: absolute;
+    right: 16px;
+    top: 16px;
+    width: 32px;
+    height: 32px;
+    opacity: 0.3;
+}
+
+.modal-close:hover 
+{
+    opacity: 1;
+}
+
+.modal-close:before, 
+.modal-close:after 
+{
+    position: absolute;
+    left: 15px;
+    content: ' ';
+    height: 33px;
+    width: 2px;
+    background-color: #000;
+}
+
+.modal-close:before 
+{
+    transform: rotate(45deg);
+}
+
+.modal-close:after 
+{
+    transform: rotate(-45deg);
+}
+
+.modal-title
+{
+    text-align: center;
+
+    font-family: cursive;
+
+    margin-bottom: 50px;
+}
+
+.modal-content
+{
+    text-align: justify;
+    text-indent: 30px;
+
+    max-height: 600px;
+    overflow-y: scroll;
+    
+    padding-left: 128px;
+    padding-right: 128px;
+}
+
+/* ====== Scrollbar ====== */
+
+::-webkit-scrollbar 
+{
+    width: 10px;
+}
+
+::-webkit-scrollbar-track 
+{
+    background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb 
+{
+    background: #888;
+}
+
+::-webkit-scrollbar-thumb:hover 
+{
+    background: #555;
+}
